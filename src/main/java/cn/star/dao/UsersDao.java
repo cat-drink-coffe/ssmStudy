@@ -17,17 +17,20 @@ import java.util.List;
 @Repository
 
 public interface UsersDao {
-    //查询所有用户cn.star.dao.UsersDao.findUsers
+    //查询所有用户
     //@Select("select * from users")
     public List<Users> findUsers();
 
     //用户注册
-    @Insert("INSERT INTO USERS (username,PASSWORD) VALUES(#{username},#{PASSWORD})")
+    //@Insert("INSERT INTO USERS (username,password) VALUES(#{username},#{password})")
     public void insertUsers(Users users);
 
     //用户登录
-    @Select("select * from users where username=#{username} and PASSWORD=#{PASSWORD}")
+    @Select("select * from users where username=#{username} and password=#{password}")
     public Users login(Users users);
 
     public void deleteUser(int id);
+
+    Users findUserById(int id);
+
 }

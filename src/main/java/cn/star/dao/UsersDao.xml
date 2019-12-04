@@ -6,6 +6,12 @@
     <select id="findUsers" resultType="cn.star.domain.Users">
        select * from users
     </select>
+    <select id="findUserById" resultType="cn.star.domain.Users">
+       select * from users where id = #{id}
+    </select>
+    <insert id="insertUsers" >
+       replace INTO USERS (id,username,password) VALUES(#{id},#{username},#{password})
+    </insert>
     <delete id="deleteUser">
         delete from users where id = #{id}
     </delete>

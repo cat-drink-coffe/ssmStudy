@@ -13,8 +13,10 @@ import java.io.Serializable;
 public class Users {
     private Integer id;
     private String username;
-    private String PASSWORD;
-    public Users(){};
+    private String password;
+
+    public Users() {
+    }
 
     public Integer getId() {
         return id;
@@ -32,12 +34,12 @@ public class Users {
         this.username = username;
     }
 
-    public String getPASSWORD() {
-        return PASSWORD;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPASSWORD(String PASSWORD) {
-        this.PASSWORD = PASSWORD;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -45,7 +47,7 @@ public class Users {
         return "Users{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", PASSWORD='" + PASSWORD + '\'' +
+                ", PASSWORD='" + password + '\'' +
                 '}';
     }
 }

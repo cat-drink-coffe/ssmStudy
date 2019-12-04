@@ -6,15 +6,27 @@
 </head>
 <body>
 <h3>查询所有用户</h3>
-
-<c:forEach var="item" items="${list}">
+<table border="1" cellspacing="0">
     <tr>
-        <td id="${item.id }" style="width: 10px;">${item.id }</td>
-        <td id="${item.username }" style="width: 30px;">${item.username }</td>
-        <td id="${item.PASSWORD }" style="width: 100px;">${item.PASSWORD }</td>
-    </tr></br>
-</c:forEach>
-
+        <th>编号</th>
+        <th>名称</th>
+        <th>密码</th>
+        <th colspan="3">操作</th>
+    </tr>
+    <c:forEach var="item" items="${list}">
+        <tr>
+            <td>${item.id }</td>
+            <td>${item.username }</td>
+            <td>${item.password }</td>
+            <td><a href="${pageContext.request.contextPath}/users/edit?id=${item.id}">编辑</a></td>
+            <td><a href="${pageContext.request.contextPath}/users/delete?id=${item.id}">删除</a></td>
+            <td><a href="${pageContext.request.contextPath}/users/findUserById?id=${item.id}">详情</a></td>
+        </tr>
+    </c:forEach>
+    <tr>
+        <td> <a href="${pageContext.request.contextPath}/users/addgo">新增</a> </td>
+    </tr>
+</table>
 <%--${list}--%>
 </body>
 </html>

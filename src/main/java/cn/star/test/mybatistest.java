@@ -49,7 +49,7 @@ public class mybatistest {
     public void run2() throws Exception {
         Users users = new Users();
         users.setUsername("threestar");
-        users.setPASSWORD("789");
+        users.setPassword("789");
 
         // 加载配置文件
         InputStream in = Resources.getResourceAsStream("mybatis.xml");

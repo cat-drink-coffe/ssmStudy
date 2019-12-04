@@ -21,4 +21,8 @@ public interface UsersService {
     //wenjainshanghcuan
     void upLoadFile(MultipartFile upload);
     public void deleteUser(int id);
+
+    Users findUserById(int id);
+
+    Users editUserById(int id);
 }
