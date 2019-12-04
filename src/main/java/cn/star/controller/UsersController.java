@@ -77,4 +77,10 @@ public class UsersController {
         usersService.upLoadFile(upload);
         return "falselogin";
     }
+    @RequestMapping("/delete")
+    @ResponseBody
+    public void deleteUser(int id) {
+        System.out.println("删除id="+id);
+        usersService.deleteUser(id);
+    }
 }

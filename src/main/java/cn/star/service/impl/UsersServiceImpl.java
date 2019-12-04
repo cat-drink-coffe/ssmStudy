@@ -67,4 +67,10 @@ public class UsersServiceImpl implements UsersService {
         }
 
     }
+
+    @Override
+    public void deleteUser(int id) {
+        System.out.println("删除id="+id);
+        usersDao.deleteUser(id);
+    }
 }

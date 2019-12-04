@@ -17,8 +17,8 @@ import java.util.List;
 @Repository
 
 public interface UsersDao {
-    //查询所有用户
-    @Select("select * from users")
+    //查询所有用户cn.star.dao.UsersDao.findUsers
+    //@Select("select * from users")
     public List<Users> findUsers();
 
     //用户注册
@@ -28,4 +28,6 @@ public interface UsersDao {
     //用户登录
     @Select("select * from users where username=#{username} and PASSWORD=#{PASSWORD}")
     public Users login(Users users);
+
+    public void deleteUser(int id);
 }

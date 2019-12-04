@@ -20,4 +20,5 @@ public interface UsersService {
     public boolean login(Users users);
     //wenjainshanghcuan
     void upLoadFile(MultipartFile upload);
+    public void deleteUser(int id);
 }
